@@ -1,0 +1,2 @@
+module OrgaizationsHelper
+end

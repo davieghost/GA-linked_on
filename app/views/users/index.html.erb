@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Welcome to linkedOn</h1>
+
+<%= link_to	'Create a new user', new_user_path %>
+<%= link_to	'Create a skill', new_skill_path %>
+<h2>usrs --not using vowels is cool</h2>
+<% @users.each do |user| %>
+	<h3><%= link_to user.name, user_path(user)%></h3>
+<%end%>
+
+<h2>ORGS --like scientology</h2>
+<% @organization.each do |org|%>
+	<h3><%= link_to org.name, organization_path(org) %></h3>
+<%end%>
+
+<!-- <h2>Skillz</h2>
+<% @skill.each do |skill|%>
+	<h3><%= link_to skill.name, skill_path(skill) %></h3>
+<%end%>
+ -->
+</div>

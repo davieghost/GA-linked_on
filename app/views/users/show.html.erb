@@ -1,0 +1,5 @@
+<h2><%= @user.name %></h2>
+<p><%= @user.email %></p>
+<% @user.skills.each do |skill| %>
+	<h5><%= skill.name %></h5>
+<% end %>
