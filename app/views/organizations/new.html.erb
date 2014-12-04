@@ -1,0 +1,9 @@
+<div class="container">
+<%= form_for @organization do |org| %>
+<%= org.label :name %>
+<br>
+<%= org.text_field :name %>
+<br>
+<%= org.submit 'Create!'%>
+<%end%>
+</div>

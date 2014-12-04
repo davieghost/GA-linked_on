@@ -1,0 +1,11 @@
+<%= form_for @occupation do |f| %>
+
+	<%= f.label :title %> <br>
+	<%= f.text_field :title %> <br><br>
+	<%= f.label :user_id %> <br>
+	
+	<%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :name) %> <br><br>
+
+	<%= f.submit 'Create an Occupation' %>
+
+<% end %>

@@ -1,0 +1,13 @@
+<%= form_for @users do |user| %>
+
+<%= user.label :name %><br>
+<%= user.text_field :name %><br><br>
+
+<%= user.label :email %><br>
+<%= user.text_field :email %><br><br>
+
+<%= user.select :organization_id, options_from_collection_for_select(Organization.all, :id, :name) %> <br><br>
+
+<%= user.submit :'Update User!' %>
+
+<% end %>

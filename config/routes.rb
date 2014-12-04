@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   #get 'organizations/:id' => 'organizations#show'
   #the above method of including route will not yeild a "*_path" option
-  resources :organizations, only: [:show] #same as above
+  resources :organizations, only: [:show, :new, :create] #same as above
   resources :skills, only: [:show, :new, :create]
+  resources :occupations, only: [:new, :create]
   root 'users#index'
   resources :users
 
