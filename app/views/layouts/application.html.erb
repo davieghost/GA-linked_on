@@ -7,12 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% if flash[:notice] %>
-	<p><%= flash[:notice] %></p>
-<%end%>
-<div class="mainContainer">
-<%= yield %>
+	<div class="container">
+			<% if flash[:notice] %>
+				<p><%= flash[:notice] %></p>
+			<%end%>
+			<div class="jumbotron">
+				<h1><%= link_to	'Welcome to linkedOn', root_path %></h1>
+			</div>
+			<div class="nav">
+				<%= link_to	'Create a new user', new_user_path %> 
+				<%= link_to	'Create a skill', new_skill_path %> 
+				<%= link_to	'Create a organization', new_organization_path %> 
+				<%= link_to	'Create an occupation', new_occupation_path %> 
+			</div>
+			<div class="jumbotron">
+				<h1>some text</h1>
+			</div>
+		<%= yield %>
 
-</div>
+	</div>
 </body>
 </html>

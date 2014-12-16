@@ -1,18 +1,28 @@
-<div class="container">
-<%= form_for @user do |f| %>
+<div class="row">
+	<div class="col-md-12">
+<%= form_for @user do |f|%>
 <%= f.label :name %>
-<br>
+
 <%= f.text_field :name %>
-<br><br>
+
 <%= f.label :email %>
-<br>
+
 <%= f.text_field :email %>
-<br><br>
+
+<%= f.label :password %>
+
+<%= f.password_field :password %>
+
+<%= f.label :password_confirmation %>
+
+<%= f.password_field :password_confirmation %>
 <%= f.select:organization_id, options_from_collection_for_select(Organization.all, :id, :name) %>
-<br><br>
+
+
 <%= f.submit 'Create!'%>
 
 
 
 <%end%>
+</div>
 </div>

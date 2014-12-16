@@ -1,6 +1,6 @@
 <h1><%= @organization.name%></h1>
-
+<h6>members</h6>
 <% @organization.users.each do |user|%>
-	<p><%= user.name %></p>
-	<p><%= user.email %></p>
+	<p class="member-list"><%= user.name %></p>
+
 <%end%>
