@@ -1,1 +1,1 @@
-### Linkedin Excersize for BEWD-generalAssembly
+### Linkedin assignment for BEWD-generalAssembly
